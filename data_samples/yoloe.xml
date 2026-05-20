@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="YOLOE vs Safety System">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- YOLOE BASIC -->
+        <mxCell id="title1" value="YOLOE Basic (Detection Only)" style="text;html=1;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="250" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a1" value="🖼️ Image" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a2" value="🤖 YOLOE Model&#xa;(person, helmet)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="170" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a3" value="📦 Output&#xa;👷 person&#xa;⛑️ helmet" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="260" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="e1" edge="1" parent="1" source="a1" target="a2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="a2" target="a3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+
+        <!-- YOUR SYSTEM -->
+        <mxCell id="title2" value="Your Safety System (Detection + Decision)" style="text;html=1;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="20" width="350" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b1" value="🖼️ Image / 🎥 Video" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="80" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b2" value="🤖 YOLOE Detection&#xa;👷 person / ⛑️ helmet" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="160" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b3" value="🔗 Matching Logic&#xa;helmet ↔ person" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="240" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b4" value="🧠 Decision&#xa;✅ with helmet&#xa;❌ no helmet" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="320" width="250" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="b5" value="📊 Output&#xa;CSV / JSON / Video" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="420" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="e3" edge="1" parent="1" source="b1" target="b2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="b2" target="b3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="b3" target="b4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="b4" target="b5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
